@@ -49,6 +49,12 @@ export default {
         }
       });
     });
+    window.$OneSignal.push([
+      "addListenerForNotificationOpened",
+      data => {
+        console.log("Received NotificationOpened:", data);
+      }
+    ]);
   }
 };
 </script>

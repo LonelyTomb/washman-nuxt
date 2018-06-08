@@ -65,9 +65,6 @@ module.exports = {
             allowLocalhostAsSecureOrigin: true,
             notifyButton: {
                 enable: true,
-            },
-            welcomeNotification: {
-                disable: false
             }
         }
     },
