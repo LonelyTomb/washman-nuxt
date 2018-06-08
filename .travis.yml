@@ -4,14 +4,13 @@ node_js:
 
 sudo: false
 
-cache:
-  yarn: true
-  directories:
-    - "node_modules"
+cache: yarn
+
 branches:
   only:
     -master
-
+script:
+  - echo "Skipping tests"
 install:
   - yarn
   - yarn run generate
