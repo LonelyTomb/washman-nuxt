@@ -14,9 +14,11 @@
         "precommit": "npm run lint"
     },
     "dependencies": {
+        "@nuxtjs/apollo": "^4.0.0-beta.1",
         "@nuxtjs/auth": "^4.5.1",
         "@nuxtjs/axios": "^5.0.0",
         "@nuxtjs/component-cache": "^1.1.2",
+        "@nuxtjs/onesignal": "^2.0.0",
         "@nuxtjs/pwa": "^2.0.8",
         "@nuxtjs/sitemap": "^0.1.1",
         "@nuxtjs/vendor": "^1.1.4",

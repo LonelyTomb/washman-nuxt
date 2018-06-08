@@ -31,13 +31,24 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Logo from "~/components/Logo.vue";
+import VuetifyLogo from "~/components/VuetifyLogo.vue";
 
 export default {
   components: {
     Logo,
     VuetifyLogo
+  },
+  mounted() {
+    this.$OneSignal.push(() => {
+      this.$OneSignal.isPushNotificationsEnabled(isEnabled => {
+        if (isEnabled) {
+          console.log("Push notifications are enabled!");
+        } else {
+          console.log("Push notifications are not enabled yet.");
+        }
+      });
+    });
   }
-}
+};
 </script>

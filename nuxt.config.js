@@ -46,7 +46,8 @@ module.exports = {
     modules: [
         // Doc: https://github.com/nuxt-community/axios-module#usage
         '@nuxtjs/auth',
-        '@nuxtjs/axios', ['@nuxtjs/pwa', {
+        '@nuxtjs/axios',
+        '@nuxtjs/onesignal', ['@nuxtjs/pwa', {
             manifest: {
                 "name": "Washman",
                 "short_name": "washman",
@@ -58,6 +59,18 @@ module.exports = {
         '@nuxtjs/sitemap',
         '@nuxtjs/component-cache',
     ],
+    oneSignal: {
+        init: {
+            appId: '3bac4022-18c3-4015-a9e0-07ad5f83515f',
+            allowLocalhostAsSecureOrigin: true,
+            notifyButton: {
+                enable: true,
+            },
+            welcomeNotification: {
+                disable: false
+            }
+        }
+    },
     /*
      ** Axios module configuration
      */
