@@ -4,7 +4,8 @@ node_js:
 sudo: false
 cache: yarn
 branches:
-  only: "-master"
+  only:
+    - "master"
 script:
 - echo "Skipping tests"
 install:
